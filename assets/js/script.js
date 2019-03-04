@@ -1,7 +1,6 @@
 function countDown() {
 
-    let clock = document.querySelector('#countdown'),
-        countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
+    let countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
         currentTime = moment().unix(),
         timeDifference = countdownEnd - currentTime,
         duration = moment.duration(timeDifference * 1000, 'milliseconds'),
