@@ -1,6 +1,7 @@
 body {
     background-image: url('../img/background.jpg');
-    background-size: cover;
+    background-size: auto;
+    font-family: $primaryFont;
     color: $primaryColor;
     font-size: 16px
 }
@@ -8,7 +9,15 @@ body {
 main {
     width: 100%;
     max-width: $desktop;
-    margin: 0 auto
+    margin: 0 auto;
+
+    h1 {
+        margin-top: 30vh;
+        text-align: center;
+        font-size: 2.8em;
+        font-weight: normal;
+        text-shadow: 5px 3px 6px rgba(0,0,0,0.75)
+    }
 }
 
 #countdown {
@@ -17,7 +26,7 @@ main {
     justify-content: space-between;
     width: 100%;
     max-width: 800px;
-    margin: 40vh auto 0 auto;
+    margin: 0 auto;
 
     div {
         flex: 0 0 20%;
