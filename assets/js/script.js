@@ -1,37 +1,39 @@
-window.onload = function (e) {
-
+function countDown() {
+    
     let $clock = $('#countdown'),
-        eventTime = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
+        countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
         currentTime = moment().unix(),
-        diffTime = eventTime - currentTime,
-        duration = moment.duration(diffTime * 1000, 'milliseconds'),
+        timeDifference = countdownEnd - currentTime,
+        duration = moment.duration(timeDifference * 1000, 'milliseconds'),
         interval = 1000;
 
-    if (diffTime > 0) {
+    if (timeDifference > 0) {
 
-        let $d = $('#days').appendTo($clock),
-            $h = $('#hours').appendTo($clock),
-            $m = $('#minutes').appendTo($clock),
-            $s = $('#seconds').appendTo($clock);
+        let $days = $('#days').appendTo($clock),
+            $hours = $('#hours').appendTo($clock),
+            $minutes = $('#minutes').appendTo($clock),
+            $seconds = $('#seconds').appendTo($clock);
 
         setInterval(function () {
 
             duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
-            let d = `<span>days</span><br>` + moment.duration(duration).days(),
-                h = `<span>hours</span><br>` + moment.duration(duration).hours(),
-                m = `<span>minutes</span><br>` + moment.duration(duration).minutes(),
-                s = `<span>seconds</span><br>` + moment.duration(duration).seconds();
+            let days = `<span>days</span><br>` + moment.duration(duration).days(),
+                hours = `<span>hours</span><br>` + moment.duration(duration).hours(),
+                minutes = `<span>minutes</span><br>` + moment.duration(duration).minutes(),
+                seconds = `<span>seconds</span><br>` + moment.duration(duration).seconds();
 
-            d = $.trim(d).length === 1 ? '0' + d : d;
-            h = $.trim(h).length === 1 ? '0' + h : h;
-            m = $.trim(m).length === 1 ? '0' + m : m;
-            s = $.trim(s).length === 1 ? '0' + s : s;
+            days = $.trim(days).length === 1 ? '0' + days : days;
+            hours = $.trim(hours).length === 1 ? '0' + hours : hours;
+            minutes = $.trim(minutes).length === 1 ? '0' + minutes : minutes;
+            seconds = $.trim(seconds).length === 1 ? '0' + seconds : seconds;
 
-            $d.html(d);
-            $h.html(h);
-            $m.html(m);
-            $s.html(s);
+            $days.html(days);
+            $hours.html(hours);
+            $minutes.html(minutes);
+            $seconds.html(seconds);
 
         }, interval);
     }
 };
+
+countDown()
