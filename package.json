@@ -1,0 +1,22 @@
+{
+  "name": "comingsoon",
+  "version": "1.0.0",
+  "description": "ComingSoon Landingpage",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter-stuhlmann/ComingSoon-Landingpage.git"
+  },
+  "author": "Peter R. Stuhlmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peter-stuhlmann/ComingSoon-Landingpage/issues"
+  },
+  "homepage": "https://github.com/peter-stuhlmann/ComingSoon-Landingpage#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
