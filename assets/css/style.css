@@ -1,2 +1,33 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  color: #fff;
+  font-size: 16px; }
+
+main {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+#countdown {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 40vh auto 0 auto; }
+  #countdown div {
+    flex: 0 0 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 15px 0;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 3em; }
+    @media only screen and (max-width: 670px) {
+      #countdown div {
+        flex: 0 0 100%; } }
+    #countdown div span {
+      font-size: 1.8rem; }
 
 /*# sourceMappingURL=style.css.map */

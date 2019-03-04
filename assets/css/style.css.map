@@ -8,9 +8,9 @@
 	],
 	"sourcesContent": [
 		"@import \"partials/variables\";\n@import \"partials/layout\";",
-		"",
-		""
+		"$primaryColor: #fff;\n\n$primaryFont: 'Great Vibes', cursive;\n\n$borderRadius: 5px;\n    \n$padding: 15px;\n$margin: $padding;\n\n$desktop: 1170px;\n$tablet: 670px;\n",
+		"body {\n    background-image: url('../img/background.jpg');\n    background-size: cover;\n    color: $primaryColor;\n    font-size: 16px\n}\n\nmain {\n    width: 100%;\n    max-width: $desktop;\n    margin: 0 auto\n}\n\n#countdown {\n    display: flex;\n    flex-flow: row wrap;\n    justify-content: space-between;\n    width: 100%;\n    max-width: 800px;\n    margin: 40vh auto 0 auto;\n\n    div {\n        flex: 0 0 20%;\n        background-color: rgba(0, 0, 0, 0.7);\n        border-radius: $borderRadius;\n        padding: $padding 0;\n        margin: $margin 0;\n        text-align: center;\n        font-size: 3em;\n\n        @media only screen and (max-width: $tablet) {\n            flex: 0 0 100%;\n        }\n\n        span {\n            font-size: 1.8rem\n        }\n    }\n}\n"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AEAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,4BAA4B;EAC9C,eAAe,EAAE,KAAK;EACtB,KAAK,EDHM,IAAI;ECIf,SAAS,EAAE,IACf,GAAC;;AAED,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EDAH,MAAM;ECCZ,MAAM,EAAE,MACZ,GAAC;;AAED,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,QAAQ;EACnB,eAAe,EAAE,aAAa;EAC9B,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,gBAAgB,GAmB3B;EAzBD,AAQI,UARM,CAQN,GAAG,CAAC;IACA,IAAI,EAAE,OAAO;IACb,gBAAgB,EAAE,kBAAkB;IACpC,aAAa,EDpBN,GAAG;ICqBV,OAAO,EDnBL,IAAI,CCmBY,CAAC;IACnB,MAAM,EDpBJ,IAAI,CCoBU,CAAC;IACjB,UAAU,EAAE,MAAM;IAClB,SAAS,EAAE,GAAG,GASjB;IAPG,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;MAjBhD,AAQI,UARM,CAQN,GAAG,CAAC;QAUI,IAAI,EAAE,QAAQ,GAMrB;IAxBL,AAqBQ,UArBE,CAQN,GAAG,CAaC,IAAI,CAAC;MACD,SAAS,EAAE,MACf,GAAC"
 }
