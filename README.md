@@ -2,6 +2,8 @@
 
 Landingpage with Countdown
 
+![MIT License](https://img.shields.io/github/license/peter-stuhlmann/ComingSoon-Landingpage.svg) ![Code size](https://img.shields.io/github/languages/code-size/peter-stuhlmann/ComingSoon-Landingpage.svg) ![downloads](https://img.shields.io/github/downloads/peter-stuhlmann/ComingSoon-Landingpage/total.svg) ![open issues](https://img.shields.io/github/issues/peter-stuhlmann/ComingSoon-Landingpage.svg) ![closed issues](https://img.shields.io/github/issues-closed/peter-stuhlmann/ComingSoon-Landingpage.svg)
+
 ![ComingSoon landingpage countdown, screenshot](assets/img/screenshot.png)
 
 
