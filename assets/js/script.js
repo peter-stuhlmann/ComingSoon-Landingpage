@@ -13,7 +13,7 @@ function countDown() {
         setInterval(function () {
 
             duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
-            let days = `<span>days</span><br>` + Math.round(timeDifference / 86400),
+            let days = `<span>days</span><br>` + Math.floor(timeDifference / 86400),
                 hours = `<span>hours</span><br>` + moment.duration(duration).hours(),
                 minutes = `<span>minutes</span><br>` + moment.duration(duration).minutes(),
                 seconds = `<span>seconds</span><br>` + moment.duration(duration).seconds();
