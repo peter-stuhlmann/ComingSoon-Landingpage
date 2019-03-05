@@ -7,7 +7,7 @@ Landingpage with Countdown
 ![ComingSoon landingpage countdown, screenshot](assets/img/screenshot.png)
 
 
-Preview: [https://hotpink.eu/comingsoon](https://hotpink.eu/comingsoon/)
+Preview: [https://peter-stuhlmann-webentwicklung.de/countdown](https://peter-stuhlmann-webentwicklung.de/countdown/)
 
 ---
 
