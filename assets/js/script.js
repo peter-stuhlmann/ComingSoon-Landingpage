@@ -1,11 +1,11 @@
 function countDown() {
 
-    let countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
+    let countdownEnd = moment('06-03-2019 00:49:20', 'DD-MM-YYYY HH:mm:ss').unix(),
         currentTime = moment().unix(),
-        timeDifference = countdownEnd - currentTime -1,
+        timeDifference = countdownEnd - currentTime - 1,
         duration = moment.duration(timeDifference * 1000, 'milliseconds'),
         interval = 1000;
-    
+
     console.log(timeDifference)
 
     if (timeDifference > 0) {
@@ -24,6 +24,11 @@ function countDown() {
             document.querySelector('#seconds').innerHTML = seconds
 
         }, interval);
+    } else {
+        document.querySelector('#days').innerHTML = `<span>days</span><br>0`
+        document.querySelector('#hours').innerHTML = `<span>hours</span><br>0`
+        document.querySelector('#minutes').innerHTML = `<span>minutes</span><br>0`
+        document.querySelector('#seconds').innerHTML = `<span>seconds</span><br>0`
     }
 };
 
