@@ -2,7 +2,7 @@ function countDown() {
 
     let countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
         currentTime = moment().unix(),
-        timeDifference = countdownEnd - currentTime,
+        timeDifference = countdownEnd - currentTime -1,
         duration = moment.duration(timeDifference * 1000, 'milliseconds'),
         interval = 1000;
     
