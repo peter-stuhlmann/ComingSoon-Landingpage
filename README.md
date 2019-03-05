@@ -44,6 +44,65 @@ Write _node-modules_ in the .gitignore file
 <script src="assets/js/script.js"></script>
 ```
 
+**7. Insert for each time unit a div in your HTML document**
+```
+<div id="days"></div> 
+<div id="hours"></div>
+<div id="minutes"></div>
+<div id="seconds"></div>
+```
+
+**8. Write a function in your js file**
+```
+function countDown() {
+};
+countDown()
+```
+
+**9. Write a function in your js file**
+```
+let countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix(),
+    currentTime = moment().unix(),
+    timeDifference = countdownEnd - currentTime,
+    duration = moment.duration(timeDifference * 1000, 'milliseconds'),
+    interval = 1000;
+```
+_statement:_  
+```countdownEnd = moment('01-05-2019 09:00:00', 'DD-MM-YYYY HH:mm:ss').unix()``` is the end time of the countdown.   
+```currentTime = moment().unix()``` For this code the moment.js is necessary.  
+```timeDifference = countdownEnd - currentTime``` Difference between the end time of the countdown and now.  
+```duration = moment.duration(timeDifference * 1000, 'milliseconds')``` Time difference in milliseconds  
+```interval = 1000;``` 1000ms = 1s; the countdown updates every second
+
+**10. Write an if condition**
+```
+if (timeDifference > 0) {
+}
+```
+
+**11. Write this function within the if condition. Here the variables days, hours, minutes and seconds are defined.**
+```
+setInterval(function () {
+    duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
+    let days = moment.duration(duration).days(),
+        hours = moment.duration(duration).hours(),
+        minutes = moment.duration(duration).minutes(),
+        seconds = moment.duration(duration).seconds();
+}, interval);
+```
+
+**12. Output the variables in the HTML file. Write these commands within the if condition at the end (before ```}, interval);```)**
+```
+document.querySelector('#days').innerHTML = days
+document.querySelector('#hours').innerHTML = hours
+document.querySelector('#minutes').innerHTML = minutes
+document.querySelector('#seconds').innerHTML = seconds
+```
+---
+
+**13. Of course now you can still style your page.**   
+My recommendation: [HTML & CSS: Erfolgreich Websites gestalten und programmieren](https://amzn.to/2HfNJVx)
+
 ---
 
 [&copy; Peter R. Stuhlmann Webentwicklung](https://peter-stuhlmann-webentwicklung.de)
