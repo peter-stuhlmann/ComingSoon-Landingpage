@@ -1,12 +1,10 @@
-function countDown() {
+let countdownEnd = moment('06-03-2019 00:49:20', 'DD-MM-YYYY HH:mm:ss').unix(),
+    currentTime = moment().unix(),
+    timeDifference = countdownEnd - currentTime - 1,
+    duration = moment.duration(timeDifference * 1000, 'milliseconds'),
+    interval = 1000;
 
-    let countdownEnd = moment('06-03-2019 00:49:20', 'DD-MM-YYYY HH:mm:ss').unix(),
-        currentTime = moment().unix(),
-        timeDifference = countdownEnd - currentTime - 1,
-        duration = moment.duration(timeDifference * 1000, 'milliseconds'),
-        interval = 1000;
-
-    console.log(timeDifference)
+function countDown(countdownEnd, currentTime, timeDifference, duration, interval) {
 
     if (timeDifference > 0) {
 
@@ -32,4 +30,4 @@ function countDown() {
     }
 };
 
-countDown()
+countDown(countdownEnd, currentTime, timeDifference, duration, interval)
