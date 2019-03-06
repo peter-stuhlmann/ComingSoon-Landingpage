@@ -1,13 +1,12 @@
-let countdownEnd = moment('06-03-2019 21:07:08', 'DD-MM-YYYY HH:mm:ss').unix(),
+let countdownEnd = moment('06-03-2019 21:50:08', 'DD-MM-YYYY HH:mm:ss').unix(),
     currentTime = moment().unix(),
-    timeDifference = countdownEnd - currentTime - 1,
-    duration = moment.duration(timeDifference * 1000, 'milliseconds'),
+    duration = moment.duration((countdownEnd - currentTime - 1) * 1000, 'milliseconds'),
     interval = 1000;
 
 let countDown = setInterval(function () {
 
     duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
-    let days = `<span>days</span><br>` + Math.floor(timeDifference / 86400),
+    let days = `<span>days</span><br>` + Math.floor(duration / 1000 / 86400),
         hours = `<span>hours</span><br>` + moment.duration(duration).hours(),
         minutes = `<span>minutes</span><br>` + moment.duration(duration).minutes(),
         seconds = `<span>seconds</span><br>` + moment.duration(duration).seconds();
