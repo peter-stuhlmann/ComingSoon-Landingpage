@@ -47,6 +47,10 @@ main {
         flex: 0 0 100%; } }
     #countdown div span {
       font-size: 1.8rem; }
+      #countdown div span:first-child {
+        display: block;
+        font-size: 4rem;
+        margin-bottom: -90px; }
 
 footer {
   font-family: "Open Sans", sans-serif;

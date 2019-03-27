@@ -52,7 +52,13 @@ main {
         }
 
         span {
-            font-size: 1.8rem
+            font-size: 1.8rem;
+            
+            &:first-child {
+                display: block;
+                font-size: 4rem;
+                margin-bottom: -90px
+            }
         }
     }
 }
